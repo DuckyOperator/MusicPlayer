@@ -1,8 +1,14 @@
 //this is a music player
-void setup() {}
+void setup() {
+  fullScreen();
+  population();
+}
 
-void draw() {}//
+void draw() {
+}
 
-void keyPressed() {}
+void keyPressed() {
+}
 
-void mousePressed() {}
+void mousePressed() {
+}
