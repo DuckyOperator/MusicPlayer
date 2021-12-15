@@ -5,6 +5,8 @@ void setup() {
 }
 
 void draw() {
+  powerButtonMousePressed();
+  
 }
 
 void keyPressed() {
