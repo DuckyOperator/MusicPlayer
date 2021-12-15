@@ -10,4 +10,6 @@ void powerButtonDraw() {
   //text
 }
 
-void powerButtonMousePressed() {}
+void powerButtonMousePressed() {
+  if (mouseX>powerbuttonX && mouseX<powerbuttonX+powerButtonWidth && mouseY>powerbuttonY && mouseY<powerbuttonY+powerButtonHeight) exit();
+}
