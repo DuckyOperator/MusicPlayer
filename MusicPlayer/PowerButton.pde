@@ -1,5 +1,6 @@
 color resetWhite=#FFFFFF, black=#030303, red=#900A0A, buttonColour;
 float powerbuttonX, powerbuttonY, powerButtonWidth, powerButtonHeight;
+String powerButton = "monkey";
 
 void powerButton() {
 }
@@ -14,7 +15,7 @@ void powerButtonDraw() {
     hoverOverButtonFill();
   }
   //text
-  textCode(String string, int size, float rectX, float rectY, float rectWidth, float rectHeight);
+  textCode(powerButton, 24 ,powerbuttonX, powerbuttonY, powerButtonWidth, powerButtonHeight);
 }
 
 void powerButtonMousePressed() {

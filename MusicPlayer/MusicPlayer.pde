@@ -5,7 +5,7 @@ void setup() {
 }
 
 void draw() {
-  powerButtonMousePressed();
+  powerButtonDraw();
   
 }
 
