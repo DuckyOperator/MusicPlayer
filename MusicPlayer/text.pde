@@ -17,7 +17,7 @@ void textSetup() {
 }
 
 void textCode(String string, int size, float rectX, float rectY, float rectWidth, float rectHeight) {
-  fill(black); 
+ // fill(black); 
   textAlign (CENTER, CENTER); 
  // textFont(font, size); 
   text(string, rectX, rectY, rectWidth, rectHeight);

@@ -21,7 +21,12 @@ void setup() {
 }
 
 void draw() {
-  powerButtonDraw();
+ //powerButtonDraw();
+
+  if ( song1.isLooping() ) {
+    println ("Is Looping");
+    println ( song1.loopCount() );
+  }
 }
 
 void keyPressed() {
@@ -31,8 +36,7 @@ void keyPressed() {
     } else if ( song1.position() >= song1.length() ) {
       song1.pause();
       song1.rewind();
-    }
-    else {
+    } else {
       song1.play();
     }
   }
@@ -42,15 +46,26 @@ void keyPressed() {
       song1.pause ();
       song1.rewind();
     } else {
-      song1.rewind();}
+      song1.rewind();
+    }
   }
   //fastfoweard
   if (key == 'f') song1.skip(1000);
   //fast rewind
   if (key == 'f') song1.skip(-1000);
+
+//mute
+if (key == 'm') {
+  if (song1.isMuted() ) {
+    song1.unmute();
+  } 
+  {
+    song1.mute();
   }
-  //mute
-  if (key == 'm') {if (song1.isMuted() ) {song1.unmute();} {song1.mute();} }
-  void mousePressed();
-  powerButtonMousePressed();
-  
+  //loop
+  int loopIntNum = 2;
+  if ( key == '1' || key == 'L' ) song1.loop(loopIntNum);
+}
+//void mousePressed() {
+ //powerButtonMousePressed();
+//}
