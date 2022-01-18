@@ -8,7 +8,9 @@ import ddf.minim.ugens.*;
 
 //this is a music player
 Minim minim;
-AudioPlayer song1;
+int numberOfSongs = 3;
+AudioPlayer[] song = new AudioPlayer[numberOfSongs];
+int currentSong = numberOfSongs - numberOfSongs;
 
 
 void setup() {
@@ -16,8 +18,10 @@ void setup() {
   population();
 
   minim = new Minim(this);
-  song1 = minim.loadFile("music/Mac DeMarco - Ode To Viceroy.mp3");
-  song1.play();
+  song[currentSong] = minim.loadFile("music/Mac DeMarco - Ode To Viceroy.mp3");
+  song[currentSong+1] = minim.loadFile("music/Mac DeMarco - Chamber of Reflection.mp3");
+  song[currentSong+2] = minim.loadFile("music/Mac DeMarco - Robson Girl.mp3");
+  //song1.play();
 }
 
 void draw() {
@@ -50,7 +54,7 @@ void keyPressed() {
     }
   }
   //fastfoweard
-  if (key == 'f') song1.skip(1000);
+  if (key == 'f') song.skip(1000);
   //fast rewind
   if (key == 'f') song1.skip(-1000);
 
