@@ -28,4 +28,4 @@ String powerButton = "monkey";
  // rect(powerbuttonX, powerbuttonY, powerButtonWidth, powerButtonHeight);
  // stroke(1);
  // fill(resetWhite);
-}
+//}

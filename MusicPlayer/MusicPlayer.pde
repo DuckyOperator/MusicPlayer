@@ -16,6 +16,8 @@ int currentSong = numberOfSongs - numberOfSongs;
 void setup() {
   fullScreen();
   population();
+  
+
 
   minim = new Minim(this);
   song[currentSong] = minim.loadFile("music/Mac DeMarco - Ode To Viceroy.mp3");
@@ -25,51 +27,52 @@ void setup() {
 }
 
 void draw() {
+  nextSongDraw();
  //powerButtonDraw();
 
-  if ( song1.isLooping() ) {
-    println ("Is Looping");
-    println ( song1.loopCount() );
+  //if ( song1.isLooping() ) {
+   // println ("Is Looping");
+  //  println ( song1.loopCount() );
   }
-}
+//}
 
-void keyPressed() {
-  if (key == 'p') {
-    if ( song1.isPlaying() ) {
-      song1.pause();
-    } else if ( song1.position() >= song1.length() ) {
-      song1.pause();
-      song1.rewind();
-    } else {
-      song1.play();
-    }
-  }
+//void keyPressed() {
+//  if (key == 'p') {
+  //  if ( song1.isPlaying() ) {
+   //   song1.pause();
+   // } else if ( song1.position() >= song1.length() ) {
+ //     song1.pause();
+  //    song1.rewind();
+  // } else {
+  //    song1.play();
+//    }
+ // }
   //play-stop
-  if (key == 's') {
-    if (song1.isPlaying () ) {
-      song1.pause ();
-      song1.rewind();
-    } else {
-      song1.rewind();
-    }
-  }
+ // if (key == 's') {
+   // if (song1.isPlaying () ) {
+  //    song1.pause ();
+  //    song1.rewind();
+  //  } else {
+  //    song1.rewind();
+  //  }
+//  }
   //fastfoweard
-  if (key == 'f') song.skip(1000);
-  //fast rewind
-  if (key == 'f') song1.skip(-1000);
+ // if (key == 'f') song.skip(1000);
+ // //fast rewind
+ // if (key == 'f') song1.skip(-1000);
 
 //mute
-if (key == 'm') {
-  if (song1.isMuted() ) {
-    song1.unmute();
-  } 
-  {
-    song1.mute();
-  }
+//if (key == 'm') {
+ // if (song1.isMuted() ) {
+ //   song1.unmute();
+  //} 
+ // {
+   // song1.mute();
+ // }
   //loop
-  int loopIntNum = 2;
-  if ( key == '1' || key == 'L' ) song1.loop(loopIntNum);
-}
+ // int loopIntNum = 2;
+ // if ( key == '1' || key == 'L' ) song1.loop(loopIntNum);
+//}
 //void mousePressed() {
  //powerButtonMousePressed();
 //}
