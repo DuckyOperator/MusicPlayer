@@ -28,7 +28,9 @@ void setup() {
 
 void draw() {
   nextSongDraw();
- //powerButtonDraw();
+  nextSongSetup();
+ powerButtonDraw();
+ powerButton();
 
   //if ( song1.isLooping() ) {
    // println ("Is Looping");

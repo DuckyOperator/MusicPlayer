@@ -15,5 +15,14 @@ void nextSongDraw() {
 }
 
 void nextSongMousePressed() {
-
+  if (mouseX>nextSongX && mouseX<nextSongX+nextSongWidth && mouseY>nextSongY && mouseY<nextSongY+nextSongHeight) {
+   if ( song[currentSong].isPlaying() ) {
+   song[currentSong].pause();
+   song[currentSong].rewind();
+   currentSong ++;
+   song[currentSong].play();
+   } else {
+   song[currentSong].rewind();
+   currentSong ++;}
+  }
 }
